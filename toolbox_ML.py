@@ -12,6 +12,20 @@ from scipy.stats import chi2_contingency
 
 def describe_df(df):
 
+    """
+    Analiza el tipo de datos de la columna, número de missing values, el número de valores únicos y la cardinalidad de un data frame.
+
+    Argumentos:
+    df (pd.DataFrame): DataFrame cuyas columnas se desean analizar.
+    
+    Devuelve:
+    DataFrame: con tantas columnas como columnas tenga el df original y con 4 filas, una con cada valor.
+        DATA_TYPE: tipo de dato de la columna (object, int, float, bool)
+        MISSINGS(%): porcentaje de valores perdidos (NaN) de la columna
+        UNIQUE_VALUES: número de valores únicos de la columna
+        CARDIN(%): porcentaje de cardinalidad, (valores únicos / valores totales) de la columna
+    """
+
     dict = {}
     list_valores = ["DATA_TYPE","MISSINGS(%)","UNIQUE_VALUES","CARDIN(%)"]
     indices = df.dtypes.index
@@ -38,7 +52,7 @@ def tipifica_variables(df):
     Tipifica las variables de un DataFrame en función de su tipo y cardinalidad.
 
     Argumentos:
-    df (pandas.DataFrame): DataFrame cuyas variables se desean analizar y tipificar.
+    df (pandas.DataFrame): DataFrame cuyas columnas se desean analizar y tipificar.
 
     Retorna:
     pandas.DataFrame: DataFrame resumen que contiene, para cada variable:
