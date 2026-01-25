@@ -120,43 +120,19 @@ def get_features_num_regression (dataframe,
                                  umbral_corr = 0.5,
                                  pvalue = None):
     '''
-    Esta función selecciona las variables numéricas de un DataFrame que 
-    presentan una correlación significativa con una variable objetivo, pensada
-    para un problema de regresión.
+    Selecciona las variables numéricas de un DataFrame que presentan una correlación 
+    significativa con una variable objetivo, pensada para un problema de regresión.
 
-    La función recibe como argumentos un DataFrame de Pandas, el nombre de una
-    de sus columnas (target_col), que debe ser una variable numérica continua o 
-    discreta con alta cardinalidad, un umbral de correlación (umbral_corr) y,
-    opcionalmente, un valor de significación estadística (pvalue).
+    Argumentos:
+        dataframe (pd.DataFrame): DataFrame que contiene los datos
+        target_col (str): Nombre de la columna objetivo. Debe ser una variable numérica continua o discreta con una cardinalidad alta.
+        umbral_corr (float): Umbral mínimo de correlación que debe existir entre una variable y target_col para ser seleccionada. 
+        Debe estar entre 0 y 1. Por defecto indicamos 0.5.
+        pvalue (float o None): Nivel de significación estadística para el test de hipótesis de la correlación.
 
-    Se devuelven únicamente aquellas columnas numericas cuya correlación de Pearson
-    con la variable objetivo sea superior, en valor absoluto, al umbral indicado.
-    Si se especifica pvalue, además se exige que la correlación sea estadísticamente
-    significativa según el test de hipótesis de Pearson.
-
-    La función realiza comprobaciones sobre los valores de entrada para evitar errores
-    de ejecución. En el caso de que alguno de los argumentos no sea válido, se imprimirá
-    un mensaje informativo y la función devolverá None.
-
-    Args:
-        dataframe (pd.DataFrame):
-            DataFrame que contiene los datos
-        target_col (str):
-            Nombre de la columna objetivo. Debe ser una variable numérica continua o discreta
-            con una cardinalidad alta.
-        umbral_corr (float, optional):
-            Umbral mínimo de correlación (en valor absoluto) que debe existir entre una 
-            variable y target_col para ser seleccionada. Debe estar entre 0 y 1. Por defecto
-            es 0.5.
-
-        pvalue (float or None, optional):
-            Nivel de significación estadística para el test de hipótesis de la correlación.
-            Si es None, no se aplica este filtro. Por defecto es None.
-
-    Returns:
-        list or None:
-            Lista con los nombres de las columnas numéricas que cumplen los criterios establecidos.
-            Devuelve None si los parámetros de entrada no son válidos.
+    Devuelve:
+        list o None: Lista con los nombres de las columnas numéricas que cumplen los criterios establecidos.
+        Devuelve None si los parámetros de entrada no son válidos.
     '''
 
     if not isinstance (dataframe, pd.DataFrame):
