@@ -151,12 +151,12 @@ def get_features_num_regression (dataframe,
         print ("Error: target_col no tiene suficiente cardinalidad para regresión")
         return None
     
-    if not isinstance (umbral_corr, float) or not (0<= umbral_corr <=1):
+    if not isinstance (umbral_corr, (int,float)) or not (0<= umbral_corr <=1):
         print ("Error: umbral_corr debe ser un float entre 0 y 1.")
         return None
     
     if pvalue is not None:
-        if not isinstance (pvalue, float) or not (0 <=pvalue <=1):
+        if not isinstance (pvalue, (int,float)) or not (0 <=pvalue <=1):
             print ("Error: pvalue debe ser None o un float entre 0 y 1.")
             return None
         
@@ -168,7 +168,7 @@ def get_features_num_regression (dataframe,
     for col in numeric_cols:
         aux_df = dataframe[[target_col, col]].dropna()
 
-        if len (aux_df) <2:
+        if len (aux_df) <2 or aux_df[col].nunique()<2:
             continue
 
         corr, p_val = pearsonr (aux_df[target_col], aux_df[col])
@@ -178,7 +178,6 @@ def get_features_num_regression (dataframe,
                 selected_features.append(col)
 
     return selected_features
-
 
 
 '''Cuarta Herramienta: plot_features_numbers_num_regression'''
