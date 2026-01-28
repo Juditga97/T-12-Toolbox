@@ -159,6 +159,8 @@ def get_features_num_regression (dataframe,
         if not isinstance (pvalue, (int,float)) or not (0 <=pvalue <=1):
             print ("Error: pvalue debe ser None o un float entre 0 y 1.")
             return None
+    
+    dataframe = dataframe.drop(columns=["target", "iris_class"], errors="ignore") #Son variables clasificatorias. Target es una etiqueta numérica de clase.
         
     numeric_cols = dataframe.select_dtypes(include=np.number).columns
     numeric_cols = numeric_cols.drop(target_col)
