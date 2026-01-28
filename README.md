@@ -14,10 +14,10 @@ El objetivo es crear funciones reutilizables que faciliten el preprocesamiento d
   Archivo con las funciones desarrolladas para el análisis de variables y selección de features.
 
 - `Team_Challenge_ToolBox.ipynb`  
-  Notebook donde se prueban y se explican las funciones utilizando el dataset Iris.
+  Notebook con el enunciado del Team Challenge proporcionado por el bootcamp.
 
 - `main.ipynb`  
-  Notebook principal de trabajo con el dataset y aplicación de la toolbox.
+  Notebook principal donde se aplican las funciones de la toolbox al dataset Iris.
 
 - `iris.csv`  
   Dataset utilizado para las pruebas (clasificación de flores Iris).
