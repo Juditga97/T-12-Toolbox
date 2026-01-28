@@ -57,6 +57,5 @@ from toolbox_ML import tipifica_variables, describe_df
 - Javier López  
 - Sara Ruiz  
 - Jennifer Sotelo
-- Patricia García
-```  
+- Patricia García  
 
