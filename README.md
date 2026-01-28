@@ -49,3 +49,14 @@ Ejemplo de importación:
 ```python
 from toolbox_ML import tipifica_variables, describe_df
 ```
+---
+
+## 👥 Autores
+
+- Judit García  
+- Javier López  
+- Sara Ruiz  
+- Jennifer Sotelo
+- Patricia García
+```  
+
