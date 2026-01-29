@@ -41,18 +41,21 @@ Estas funciones permiten automatizar parte del análisis exploratorio previo al 
 
 ---
 
-## ▶️ Cómo usar el proyecto
+### ▶️ Cómo usar el proyecto
 
-1. Cargar el dataset `iris.csv`
-2. Importar las funciones desde `toolbox_ML.py`
-3. Ejecutar los notebooks para ver ejemplos de uso de cada función
+1. Cargar el dataset `iris.csv`.
+2. Abrir el archivo `main`.
+3. Importar las librerías necesarias y el módulo `toolbox_ML.py`.
+4. Ejecutar los notebooks para ver ejemplos de uso de cada función.
 
-Ejemplo de importación:
+### Ejemplo de importación y uso
 
 ```python
-from toolbox_ML import tipifica_variables, describe_df
+import toolbox_ML as tml
+
+tml.tipifica_variables(df)
+tml.describe_df(df)
 ```
----
 
 ## 👥 Autores
 
