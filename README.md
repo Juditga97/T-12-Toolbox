@@ -19,8 +19,8 @@ El objetivo es crear funciones reutilizables que faciliten el preprocesamiento d
 - `main.ipynb`  
   Notebook principal donde se aplican las funciones de la toolbox al dataset Iris.
 
-- `iris.csv`  
-  Dataset utilizado para las pruebas (clasificación de flores Iris).
+- `data`  
+  Carpeta donde se encuentra el dataset utilizado para las pruebas (clasificación de flores Iris).
 
 ---
 
