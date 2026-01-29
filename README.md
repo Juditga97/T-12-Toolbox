@@ -8,18 +8,18 @@ El objetivo es crear funciones reutilizables que faciliten el preprocesamiento d
 
 ---
 
-## 📁 Estructura del repositorio
+## 📁 Estructura del proyecto
 
-- `toolbox_ML.py`  
+- `toolbox_ML.py`
   Archivo con las funciones desarrolladas para el análisis de variables y selección de features.
 
-- `Team_Challenge_ToolBox.ipynb`  
+- `Team_Challenge_ToolBox.ipynb`
   Notebook con el enunciado del Team Challenge proporcionado por el bootcamp.
 
-- `main.ipynb`  
+- `main.ipynb`
   Notebook principal donde se aplican las funciones de la toolbox al dataset Iris.
 
-- `data`  
+- `data`
   Carpeta donde se encuentra el dataset utilizado para las pruebas (clasificación de flores Iris).
 
 - `Funciones_individuales`
