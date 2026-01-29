@@ -22,7 +22,7 @@ El objetivo es crear funciones reutilizables que faciliten el preprocesamiento d
 - `data`  
   Carpeta donde se encuentra el dataset utilizado para las pruebas (clasificación de flores Iris).
 
-- `funciones_individuales`
+- `Funciones_individuales`
   Carpeta donde se encuentran todas las funciones del equipo en sus respectivos notebooks.
 
 ---
